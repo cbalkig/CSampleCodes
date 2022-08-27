@@ -41,3 +41,18 @@ void print_list(struct node *head) {
         count++;
     }
 }
+
+struct node* reverse_list(struct node *head) {
+    struct node *ptr = NULL;
+    struct node *ptr2 = NULL;
+
+    while (head != NULL) {
+        ptr2 = head -> link;
+        head -> link = ptr;
+        ptr = head;
+        head = ptr2;
+    }
+
+    head = ptr;
+    return head;
+}

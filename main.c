@@ -8,5 +8,11 @@ int main() {
     add_element_end(head, 3);
 
     print_list(head);
+
+    head = reverse_list(head);
+
+    printf("After reverse:\n");
+    print_list(head);
+
     return 0;
 }
